@@ -1,0 +1,2 @@
+
+-DCATKIN_DEVEL_PREFIX=/home/hhhbird/Codes/pointcloud_processing/devel -DCMAKE_INSTALL_PREFIX=/home/hhhbird/Codes/pointcloud_processing/install -G Unix Makefiles
