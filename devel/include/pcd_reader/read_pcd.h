@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::pcd_reader::read_pcd > {
   static const char* value()
   {
-    return "56f1a0fa28ead46b41096319b59f0aa2";
+    return "2415261c9605b9f38867ffbbe495fc04";
   }
 
   static const char* value(const ::pcd_reader::read_pcd&) { return value(); }

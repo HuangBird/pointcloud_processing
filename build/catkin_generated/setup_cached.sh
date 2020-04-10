@@ -8,4 +8,3 @@
 
 # modified environment variables
 export PWD="/home/hhhbird/Codes/pointcloud_processing/build"
-export PYTHONPATH="/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages:$PYTHONPATH"
