@@ -3,6 +3,6 @@ prefix=/home/hhhbird/Codes/pointcloud_processing/devel
 Name: pcd_reader
 Description: Description of pcd_reader
 Version: 0.0.0
-Cflags: -I/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/include
+Cflags: -I/home/hhhbird/Codes/pointcloud_processing/devel/include -I/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime

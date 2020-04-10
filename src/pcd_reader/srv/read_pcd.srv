@@ -1,4 +1,9 @@
 string file_name
 ---
-int64 num_of_points
-string file_name 
+sensor_msgs/PointCloud2 point_cloud
+int16 pointcloud_type
+//the last one shows the type of the point cloud
+//1 means only XYZ points data
+//2 means XYZ points data with normals data of each point
+//3 means XYZ points data with RGB color data
+//4 means XYZ points data with RGB color data and normals data of each point, all the data in mentioned order

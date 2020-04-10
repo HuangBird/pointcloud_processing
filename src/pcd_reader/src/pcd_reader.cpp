@@ -1,4 +1,6 @@
 #include "ros/ros.h"
+#include "pcd_reader/read_pcd.h"
+
 
 #include <iostream>
 #include <sensor_msgs/PointCloud2.h>
@@ -18,31 +20,25 @@ clock_t end_t ;
 
 
 
-int
-read_pcd_file (int argc, char** argv )
+bool read_pcd_file (pcd_reader::read_pcd::Request  &req, 
+                    pcd_reader::read_pcd::Response &res )
 {
-
-
-  //input the pcd file to load point cloud
-  std::cout << "The file name is:"<<std::endl ;
-  std::string file_name ;
-  std::cin >> file_name ;
-  std::cout << std::endl ;
-  
+  //read the pcd file inputed to load point cloud  
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>); 
   start_t = clock();
-  std::cout << "Loading the points..."<<std::endl ;
-  if (pcl::io::loadPCDFile<pcl::PointXYZ> (file_name, *cloud) == -1) //* load the file
+  std::cout << "Loading the points from "<< req.file_name << "..." << std::endl ;
+  if (pcl::io::loadPCDFile<pcl::PointXYZ> (req.file_name, *cloud) == -1) //* load the file
   {
     PCL_ERROR ("Couldn't read file test_pcd.pcd \n");
     return (-1);
   }
   end_t = clock();
   dur_time = (double) ((end_t - start_t)/CLOCKS_PER_SEC);
-  std::cout << "Loaded " << cloud->width * cloud->height << " data points from "<< file_name << std::endl
+  std::cout << "Loaded " << cloud->width * cloud->height << " data points from "<< req.file_name << std::endl
             <<"It takes: " << dur_time <<"s" <<endl;
+  pcl::toROSMsg(cloud, res.point_cloud);
   
-           
+  return true;        
 }
 
 int
@@ -52,6 +48,9 @@ main (int argc, char** argv)
   ros::init (argc, argv, "pcd_reader");
   ros::NodeHandle nh; 
    
+  ros::ServiceServer service = nh.advertiseService("read_pcd", read_pcd_file);
+  ROS_INFO("Ready to add two ints.");
+  ros::spin();
   // Create a ROS publisher for the output point cloud
   ros::Publisher pub = nh.advertise<sensor_msgs::PointCloud2> ("init_pointcloud", 1);
 

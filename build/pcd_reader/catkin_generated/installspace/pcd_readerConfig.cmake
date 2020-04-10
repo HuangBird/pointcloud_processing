@@ -177,7 +177,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(pcd_reader_EXPORTED_TARGETS "")
+set(pcd_reader_EXPORTED_TARGETS "pcd_reader_generate_messages_cpp;pcd_reader_generate_messages_eus;pcd_reader_generate_messages_lisp;pcd_reader_generate_messages_nodejs;pcd_reader_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${pcd_reader_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -214,7 +214,7 @@ foreach(depend ${depends})
   list(APPEND pcd_reader_EXPORTED_TARGETS ${${pcd_reader_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "pcd_reader-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${pcd_reader_DIR}/${extra})

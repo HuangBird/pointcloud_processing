@@ -7,5 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export PKG_CONFIG_PATH="/home/hhhbird/Codes/pointcloud_processing/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/hhhbird/Codes/pointcloud_processing/build"
+export PYTHONPATH="/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages:$PYTHONPATH"
