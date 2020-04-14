@@ -19,7 +19,7 @@ add_custom_target(pcd_reader_generate_messages ALL)
 
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv" NAME_WE)
 add_custom_target(_pcd_reader_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pcd_reader" "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv" "sensor_msgs/PointField:std_msgs/Header:sensor_msgs/PointCloud2"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "pcd_reader" "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv" ""
 )
 
 #
@@ -33,7 +33,7 @@ add_custom_target(_pcd_reader_generate_messages_check_deps_${_filename}
 _generate_srv_cpp(pcd_reader
   "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pcd_reader
 )
 
@@ -66,7 +66,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pcd_reader_generate_messages_cpp)
 _generate_srv_eus(pcd_reader
   "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pcd_reader
 )
 
@@ -99,7 +99,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pcd_reader_generate_messages_eus)
 _generate_srv_lisp(pcd_reader
   "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/pcd_reader
 )
 
@@ -132,7 +132,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pcd_reader_generate_messages_lisp)
 _generate_srv_nodejs(pcd_reader
   "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/pcd_reader
 )
 
@@ -165,7 +165,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS pcd_reader_generate_messages_nodejs
 _generate_srv_py(pcd_reader
   "/home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv"
   "${MSG_I_FLAGS}"
-  "/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/kinetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/kinetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pcd_reader
 )
 

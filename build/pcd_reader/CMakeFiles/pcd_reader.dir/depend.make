@@ -300,6 +300,9 @@ pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/console/print.h
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/conversions.h
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/exceptions.h
+pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/filters/boost.h
+pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/filters/filter.h
+pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/filters/impl/filter.hpp
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/for_each_type.h
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/impl/pcl_base.hpp
 pcd_reader/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.o: /usr/include/pcl-1.7/pcl/impl/point_types.hpp

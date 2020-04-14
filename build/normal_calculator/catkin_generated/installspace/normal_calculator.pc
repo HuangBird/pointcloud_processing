@@ -1,0 +1,8 @@
+prefix=/home/hhhbird/Codes/pointcloud_processing/install
+
+Name: normal_calculator
+Description: Description of normal_calculator
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

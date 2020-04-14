@@ -1,0 +1,8 @@
+prefix=/home/hhhbird/Codes/pointcloud_processing/devel
+
+Name: car_body_defect_detect
+Description: Description of car_body_defect_detect
+Version: 0.0.0
+Cflags: -I/home/hhhbird/Codes/pointcloud_processing/devel/include -I/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

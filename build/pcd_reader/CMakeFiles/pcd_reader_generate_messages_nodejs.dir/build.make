@@ -58,9 +58,6 @@ pcd_reader/CMakeFiles/pcd_reader_generate_messages_nodejs: /home/hhhbird/Codes/p
 
 /home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv/read_pcd.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
 /home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv/read_pcd.js: /home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv
-/home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv/read_pcd.js: /opt/ros/kinetic/share/sensor_msgs/msg/PointField.msg
-/home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv/read_pcd.js: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
-/home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv/read_pcd.js: /opt/ros/kinetic/share/sensor_msgs/msg/PointCloud2.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from pcd_reader/read_pcd.srv"
 	cd /home/hhhbird/Codes/pointcloud_processing/build/pcd_reader && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/hhhbird/Codes/pointcloud_processing/src/pcd_reader/srv/read_pcd.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -p pcd_reader -o /home/hhhbird/Codes/pointcloud_processing/devel/share/gennodejs/ros/pcd_reader/srv
 
