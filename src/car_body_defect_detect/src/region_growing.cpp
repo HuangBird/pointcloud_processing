@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "region_growing/region_grow.h"
+#include "car_body_defect_detect/region_grow.h"
 
 #include <iostream>
 #include <vector>
@@ -10,8 +10,10 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/segmentation/region_growing.h>
 #include <pcl/visualization/cloud_viewer.h>
+#include <pcl/visualization/pcl_visualizer.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl_conversions/pcl_conversions.h>
+#include <pcl/common/impl/io.hpp>
 
 using namespace std;
 
@@ -51,13 +53,13 @@ data_store (const sensor_msgs::PointCloud2ConstPtr& pointcloud_with_normals)
 }
 
 
-bool region_grow (region_growing::region_grow::Request  &req, 
-                  region_growing::region_grow::Response &res )
+bool region_grow (car_body_defect_detect::region_grow::Request  &req, 
+                  car_body_defect_detect::region_grow::Response &res )
 {
   //Do the cluster when the service is called, data is the last data published to topic: pointcloud_with_normals
   pcl::search::KdTree<pcl::PointXYZ>::Ptr Neighbor(new pcl::search::KdTree<pcl::PointXYZ>());
   pcl::RegionGrowing<pcl::PointXYZ, pcl::Normal> reg;
-  reg.setMinClusterSize (30);
+  reg.setMinClusterSize (1);
   reg.setMaxClusterSize (1000000);
   reg.setSearchMethod (Neighbor);
   reg.setNumberOfNeighbours (10);
@@ -88,11 +90,29 @@ bool region_grow (region_growing::region_grow::Request  &req,
   std::cout << "[region_grower]Number of clusters is equal to " << clusters.size () << std::endl;
 
   pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
-  pcl::visualization::CloudViewer viewer ("Cluster viewer");
-  viewer.showCloud(colored_cloud);
-    while (!viewer.wasStopped ())
+   
+  pcl::PointCloud <pcl::PointXYZ>::Ptr normal_cloud(new pcl::PointCloud <pcl::PointXYZ>());
+  pcl::PointCloud <pcl::PointXYZ>::Ptr defect_cloud(new pcl::PointCloud <pcl::PointXYZ>());
+  pcl::copyPointCloud(*cloud,clusters[0].indices,*normal_cloud);
+  
+  //Gather all the defect point into one cluster 
+  std::vector<int> defect_clusters;
+     //indices are of the same type as std::vector<int>
+  for(std::size_t i = 1;i < clusters.size ();i++)
   {
+    for(std::size_t count = 0;count < clusters[i].indices.size ();count++)
+      {
+        defect_clusters.push_back(clusters[i].indices[count]);
+        //put the indice in the cluster to the end of the defect_cluster
+      }
   }
+  pcl::copyPointCloud(*cloud,defect_clusters,*defect_cloud);
+  
+  //Publish the defect point cloud to the topic
+  sensor_msgs::PointCloud2 defect_point_cloud;
+  pcl::toROSMsg(*defect_cloud, defect_point_cloud);
+  pub.publish(defect_point_cloud);
+  std::cout << "[region_grower]Published to topic:defect_cloud"<<std::endl;
 }
 
 

@@ -1,6 +1,11 @@
 (cl:defpackage car_body_defect_detect-srv
   (:use )
   (:export
+   "PLANE_MODEL"
+   "<PLANE_MODEL-REQUEST>"
+   "PLANE_MODEL-REQUEST"
+   "<PLANE_MODEL-RESPONSE>"
+   "PLANE_MODEL-RESPONSE"
    "READ_PCD"
    "<READ_PCD-REQUEST>"
    "READ_PCD-REQUEST"

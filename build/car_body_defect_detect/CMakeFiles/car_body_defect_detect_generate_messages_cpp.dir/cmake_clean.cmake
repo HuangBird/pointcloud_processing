@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/car_body_defect_detect_generate_messages_cpp"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h"
   "/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h"
   "/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h"
 )

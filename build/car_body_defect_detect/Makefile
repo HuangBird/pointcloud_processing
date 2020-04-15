@@ -67,6 +67,28 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -110,28 +132,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: install/strip
-
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -374,6 +374,21 @@ actionlib_msgs_generate_messages_cpp: car_body_defect_detect/CMakeFiles/actionli
 actionlib_msgs_generate_messages_cpp/fast:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build.make car_body_defect_detect/CMakeFiles/actionlib_msgs_generate_messages_cpp.dir/build
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/plane_segmentation.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/plane_segmentation.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/plane_segmentation.dir/rule
+
+# Convenience name for target.
+plane_segmentation: car_body_defect_detect/CMakeFiles/plane_segmentation.dir/rule
+
+.PHONY : plane_segmentation
+
+# fast build rule for target.
+plane_segmentation/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build
+.PHONY : plane_segmentation/fast
 
 # Convenience name for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_geneus.dir/rule:
@@ -1036,6 +1051,21 @@ dynamic_reconfigure_generate_messages_cpp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 # Convenience name for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_plane_model: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_plane_model
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_plane_model/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_plane_model/fast
+
+# Convenience name for target.
 car_body_defect_detect/CMakeFiles/pcd_reader.dir/rule:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/pcd_reader.dir/rule
 .PHONY : car_body_defect_detect/CMakeFiles/pcd_reader.dir/rule
@@ -1575,6 +1605,48 @@ normal_calculator/fast:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
 .PHONY : normal_calculator/fast
 
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+# Convenience name for target.
+euclidean_clustering: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+.PHONY : euclidean_clustering
+
+# fast build rule for target.
+euclidean_clustering/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
+.PHONY : euclidean_clustering/fast
+
+src/euclidean_clustering.o: src/euclidean_clustering.cpp.o
+
+.PHONY : src/euclidean_clustering.o
+
+# target to build an object file
+src/euclidean_clustering.cpp.o:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o
+.PHONY : src/euclidean_clustering.cpp.o
+
+src/euclidean_clustering.i: src/euclidean_clustering.cpp.i
+
+.PHONY : src/euclidean_clustering.i
+
+# target to preprocess a source file
+src/euclidean_clustering.cpp.i:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.i
+.PHONY : src/euclidean_clustering.cpp.i
+
+src/euclidean_clustering.s: src/euclidean_clustering.cpp.s
+
+.PHONY : src/euclidean_clustering.s
+
+# target to generate assembly for a file
+src/euclidean_clustering.cpp.s:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.s
+.PHONY : src/euclidean_clustering.cpp.s
+
 src/normal_calculator.o: src/normal_calculator.cpp.o
 
 .PHONY : src/normal_calculator.o
@@ -1629,6 +1701,33 @@ src/pcd_reader.cpp.s:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/pcd_reader.dir/build.make car_body_defect_detect/CMakeFiles/pcd_reader.dir/src/pcd_reader.cpp.s
 .PHONY : src/pcd_reader.cpp.s
 
+src/plane_segmentation.o: src/plane_segmentation.cpp.o
+
+.PHONY : src/plane_segmentation.o
+
+# target to build an object file
+src/plane_segmentation.cpp.o:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/src/plane_segmentation.cpp.o
+.PHONY : src/plane_segmentation.cpp.o
+
+src/plane_segmentation.i: src/plane_segmentation.cpp.i
+
+.PHONY : src/plane_segmentation.i
+
+# target to preprocess a source file
+src/plane_segmentation.cpp.i:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/src/plane_segmentation.cpp.i
+.PHONY : src/plane_segmentation.cpp.i
+
+src/plane_segmentation.s: src/plane_segmentation.cpp.s
+
+.PHONY : src/plane_segmentation.s
+
+# target to generate assembly for a file
+src/plane_segmentation.cpp.s:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/src/plane_segmentation.cpp.s
+.PHONY : src/plane_segmentation.cpp.s
+
 src/region_growing.o: src/region_growing.cpp.o
 
 .PHONY : src/region_growing.o
@@ -1663,6 +1762,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_nodejs"
@@ -1677,6 +1778,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... plane_segmentation"
 	@echo "... car_body_defect_detect_geneus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... bond_generate_messages_lisp"
@@ -1725,6 +1827,7 @@ help:
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_plane_model"
 	@echo "... pcd_reader"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... pcl_msgs_generate_messages_cpp"
@@ -1761,14 +1864,19 @@ help:
 	@echo "... car_body_defect_detect_gennodejs"
 	@echo "... car_body_defect_detect_genpy"
 	@echo "... normal_calculator"
-	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... euclidean_clustering"
+	@echo "... src/euclidean_clustering.o"
+	@echo "... src/euclidean_clustering.i"
+	@echo "... src/euclidean_clustering.s"
 	@echo "... src/normal_calculator.o"
 	@echo "... src/normal_calculator.i"
 	@echo "... src/normal_calculator.s"
 	@echo "... src/pcd_reader.o"
 	@echo "... src/pcd_reader.i"
 	@echo "... src/pcd_reader.s"
+	@echo "... src/plane_segmentation.o"
+	@echo "... src/plane_segmentation.i"
+	@echo "... src/plane_segmentation.s"
 	@echo "... src/region_growing.o"
 	@echo "... src/region_growing.i"
 	@echo "... src/region_growing.s"

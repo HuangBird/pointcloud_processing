@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/hhhbird/Codes/pointcloud_processing/devel/include/region_growing/region_grow.h
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h
 ros/service_traits.h
 -
-region_growing/region_growRequest.h
+car_body_defect_detect/region_growRequest.h
 -
-region_growing/region_growResponse.h
+car_body_defect_detect/region_growResponse.h
 -
 
-/home/hhhbird/Codes/pointcloud_processing/devel/include/region_growing/region_growRequest.h
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_growRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/hhhbird/Codes/pointcloud_processing/devel/include/region_growing/region_growResponse.h
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_growResponse.h
 string
 -
 vector
@@ -49,8 +49,8 @@ ros/message_operations.h
 /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/src/region_growing.cpp
 ros/ros.h
 /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/src/ros/ros.h
-region_growing/region_grow.h
-/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/src/region_growing/region_grow.h
+car_body_defect_detect/region_grow.h
+/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/src/car_body_defect_detect/region_grow.h
 iostream
 -
 vector
@@ -69,9 +69,13 @@ pcl/segmentation/region_growing.h
 -
 pcl/visualization/cloud_viewer.h
 -
+pcl/visualization/pcl_visualizer.h
+-
 sensor_msgs/PointCloud2.h
 -
 pcl_conversions/pcl_conversions.h
+-
+pcl/common/impl/io.hpp
 -
 
 /opt/ros/kinetic/include/pcl_conversions/pcl_conversions.h

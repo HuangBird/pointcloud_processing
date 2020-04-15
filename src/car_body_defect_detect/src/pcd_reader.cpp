@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "pcd_reader/read_pcd.h"
+#include "car_body_defect_detect/read_pcd.h"
 
 
 #include <iostream>
@@ -21,8 +21,8 @@ clock_t end_t ;
 ros::Publisher pub;
 
 
-bool read_pcd_file (pcd_reader::read_pcd::Request  &req, 
-                    pcd_reader::read_pcd::Response &res )
+bool read_pcd_file (car_body_defect_detect::read_pcd::Request  &req, 
+                    car_body_defect_detect::read_pcd::Response &res )
 {
   //read the pcd file inputed to load point cloud  
   pcl::PointCloud<pcl::PointXYZ> cloud; 

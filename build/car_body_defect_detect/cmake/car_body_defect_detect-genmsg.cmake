@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "car_body_defect_detect: 0 messages, 2 services")
+message(STATUS "car_body_defect_detect: 0 messages, 3 services")
 
 set(MSG_I_FLAGS "-Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -16,6 +16,11 @@ add_custom_target(car_body_defect_detect_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_custom_target(_car_body_defect_detect_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "car_body_defect_detect" "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" ""
+)
 
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_custom_target(_car_body_defect_detect_generate_messages_check_deps_${_filename}
@@ -35,6 +40,12 @@ add_custom_target(_car_body_defect_detect_generate_messages_check_deps_${_filena
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_cpp(car_body_defect_detect
+  "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/car_body_defect_detect
+)
 _generate_srv_cpp(car_body_defect_detect
   "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
   "${MSG_I_FLAGS}"
@@ -60,6 +71,8 @@ add_custom_target(car_body_defect_detect_generate_messages_cpp
 add_dependencies(car_body_defect_detect_generate_messages car_body_defect_detect_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_dependencies(car_body_defect_detect_generate_messages_cpp _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_dependencies(car_body_defect_detect_generate_messages_cpp _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv" NAME_WE)
@@ -76,6 +89,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS car_body_defect_detect_generate_mes
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_eus(car_body_defect_detect
+  "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/car_body_defect_detect
+)
 _generate_srv_eus(car_body_defect_detect
   "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
   "${MSG_I_FLAGS}"
@@ -101,6 +120,8 @@ add_custom_target(car_body_defect_detect_generate_messages_eus
 add_dependencies(car_body_defect_detect_generate_messages car_body_defect_detect_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_dependencies(car_body_defect_detect_generate_messages_eus _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_dependencies(car_body_defect_detect_generate_messages_eus _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv" NAME_WE)
@@ -117,6 +138,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS car_body_defect_detect_generate_mes
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_lisp(car_body_defect_detect
+  "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/car_body_defect_detect
+)
 _generate_srv_lisp(car_body_defect_detect
   "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
   "${MSG_I_FLAGS}"
@@ -142,6 +169,8 @@ add_custom_target(car_body_defect_detect_generate_messages_lisp
 add_dependencies(car_body_defect_detect_generate_messages car_body_defect_detect_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_dependencies(car_body_defect_detect_generate_messages_lisp _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_dependencies(car_body_defect_detect_generate_messages_lisp _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv" NAME_WE)
@@ -158,6 +187,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS car_body_defect_detect_generate_mes
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_nodejs(car_body_defect_detect
+  "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/car_body_defect_detect
+)
 _generate_srv_nodejs(car_body_defect_detect
   "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
   "${MSG_I_FLAGS}"
@@ -183,6 +218,8 @@ add_custom_target(car_body_defect_detect_generate_messages_nodejs
 add_dependencies(car_body_defect_detect_generate_messages car_body_defect_detect_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_dependencies(car_body_defect_detect_generate_messages_nodejs _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_dependencies(car_body_defect_detect_generate_messages_nodejs _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv" NAME_WE)
@@ -199,6 +236,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS car_body_defect_detect_generate_mes
 ### Generating Messages
 
 ### Generating Services
+_generate_srv_py(car_body_defect_detect
+  "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/car_body_defect_detect
+)
 _generate_srv_py(car_body_defect_detect
   "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
   "${MSG_I_FLAGS}"
@@ -224,6 +267,8 @@ add_custom_target(car_body_defect_detect_generate_messages_py
 add_dependencies(car_body_defect_detect_generate_messages car_body_defect_detect_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv" NAME_WE)
+add_dependencies(car_body_defect_detect_generate_messages_py _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv" NAME_WE)
 add_dependencies(car_body_defect_detect_generate_messages_py _car_body_defect_detect_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv" NAME_WE)

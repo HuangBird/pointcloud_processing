@@ -53,26 +53,33 @@ CMAKE_BINARY_DIR = /home/hhhbird/Codes/pointcloud_processing/build
 # Include the progress variables for this target.
 include car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/progress.make
 
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/region_grow.l
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/read_pcd.l
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/manifest.l
 
 
+/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from car_body_defect_detect/plane_model.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/build/car_body_defect_detect && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv
+
 /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/region_grow.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/region_grow.l: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from car_body_defect_detect/region_grow.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from car_body_defect_detect/region_grow.srv"
 	cd /home/hhhbird/Codes/pointcloud_processing/build/car_body_defect_detect && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv
 
 /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/read_pcd.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
 /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/read_pcd.l: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from car_body_defect_detect/read_pcd.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp code from car_body_defect_detect/read_pcd.srv"
 	cd /home/hhhbird/Codes/pointcloud_processing/build/car_body_defect_detect && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv
 
 /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for car_body_defect_detect"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating EusLisp manifest code for car_body_defect_detect"
 	cd /home/hhhbird/Codes/pointcloud_processing/build/car_body_defect_detect && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect car_body_defect_detect sensor_msgs
 
 car_body_defect_detect_generate_messages_eus: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus
+car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l
 car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/region_grow.l
 car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/read_pcd.l
 car_body_defect_detect_generate_messages_eus: /home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/manifest.l

@@ -1,0 +1,10 @@
+<launch>
+
+<node pkg = "car_body_defect_detect" type = "pcd_reader" name = "pcd_reader" required = "true" output = "screen"/>
+
+<node pkg = "car_body_defect_detect" type = "normal_calculator" name = "normal_calculator" required = "true" output = "screen" />
+
+
+<node pkg = "car_body_defect_detect" type = "region_growing" name = "region_grower" output = "screen" respawn = "true" />
+
+</launch>

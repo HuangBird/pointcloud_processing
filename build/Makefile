@@ -465,6 +465,19 @@ actionlib_msgs_generate_messages_cpp/fast:
 .PHONY : actionlib_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named plane_segmentation
+
+# Build rule for target.
+plane_segmentation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 plane_segmentation
+.PHONY : plane_segmentation
+
+# fast build rule for target.
+plane_segmentation/fast:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build
+.PHONY : plane_segmentation/fast
+
+#=============================================================================
 # Target rules for targets named car_body_defect_detect_geneus
 
 # Build rule for target.
@@ -1037,6 +1050,19 @@ dynamic_reconfigure_generate_messages_cpp/fast:
 .PHONY : dynamic_reconfigure_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named _car_body_defect_detect_generate_messages_check_deps_plane_model
+
+# Build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_plane_model: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _car_body_defect_detect_generate_messages_check_deps_plane_model
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_plane_model
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_plane_model/fast:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_plane_model/fast
+
+#=============================================================================
 # Target rules for targets named pcd_reader
 
 # Build rule for target.
@@ -1504,6 +1530,19 @@ normal_calculator/fast:
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
 .PHONY : normal_calculator/fast
 
+#=============================================================================
+# Target rules for targets named euclidean_clustering
+
+# Build rule for target.
+euclidean_clustering: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 euclidean_clustering
+.PHONY : euclidean_clustering
+
+# fast build rule for target.
+euclidean_clustering/fast:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
+.PHONY : euclidean_clustering/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1540,6 +1579,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... actionlib_msgs_generate_messages_cpp"
+	@echo "... plane_segmentation"
 	@echo "... car_body_defect_detect_geneus"
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... bond_generate_messages_lisp"
@@ -1584,6 +1624,7 @@ help:
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_plane_model"
 	@echo "... pcd_reader"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... pcl_msgs_generate_messages_cpp"
@@ -1620,6 +1661,7 @@ help:
 	@echo "... car_body_defect_detect_gennodejs"
 	@echo "... car_body_defect_detect_genpy"
 	@echo "... normal_calculator"
+	@echo "... euclidean_clustering"
 .PHONY : help
 
 

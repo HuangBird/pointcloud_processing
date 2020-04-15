@@ -36,6 +36,7 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/car_body_defect_detect/srv" TYPE FILE FILES
     "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
     "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv"
+    "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
     )
 endif()
 

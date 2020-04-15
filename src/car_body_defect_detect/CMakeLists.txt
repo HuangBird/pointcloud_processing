@@ -17,6 +17,9 @@ find_package(catkin REQUIRED COMPONENTS
   message_generation
 )
 
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
+
+
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
@@ -62,6 +65,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    region_grow.srv
    read_pcd.srv
+   plane_model.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -217,3 +221,11 @@ target_link_libraries(pcd_reader ${catkin_LIBRARIES})
 
 add_executable(normal_calculator src/normal_calculator.cpp)
 target_link_libraries(normal_calculator ${catkin_LIBRARIES})
+
+
+add_executable(euclidean_clustering src/euclidean_clustering.cpp)
+target_link_libraries(euclidean_clustering ${catkin_LIBRARIES})
+
+add_executable(plane_segmentation src/plane_segmentation.cpp)
+target_link_libraries(plane_segmentation ${catkin_LIBRARIES})
+
