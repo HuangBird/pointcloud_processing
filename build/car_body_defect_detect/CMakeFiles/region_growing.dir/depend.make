@@ -347,7 +347,6 @@ car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/segmentation/region_growing.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/area_picking_event.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/boost.h
-car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/common.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/impl/common.hpp

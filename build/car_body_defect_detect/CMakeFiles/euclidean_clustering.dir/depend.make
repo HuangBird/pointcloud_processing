@@ -344,7 +344,6 @@ car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_cluster
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/segmentation/impl/extract_clusters.hpp
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/area_picking_event.h
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/boost.h
-car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/common.h
 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/src/euclidean_clustering.cpp.o: /usr/include/pcl-1.7/pcl/visualization/common/impl/common.hpp

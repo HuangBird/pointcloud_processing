@@ -55,6 +55,8 @@ iostream
 -
 vector
 -
+thread
+-
 pcl/point_types.h
 -
 pcl/io/pcd_io.h
@@ -66,8 +68,6 @@ pcl/search/kdtree.h
 pcl/features/normal_3d.h
 -
 pcl/segmentation/region_growing.h
--
-pcl/visualization/cloud_viewer.h
 -
 pcl/visualization/pcl_visualizer.h
 -
@@ -2820,12 +2820,6 @@ boost/foreach.hpp
 boost/date_time/posix_time/posix_time.hpp
 -
 boost/filesystem.hpp
--
-
-/usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h
-pcl/visualization/pcl_visualizer.h
--
-string
 -
 
 /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h

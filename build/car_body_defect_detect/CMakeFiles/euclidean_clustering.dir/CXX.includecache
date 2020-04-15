@@ -27,8 +27,6 @@ pcl/visualization/pcl_visualizer.h
 -
 sensor_msgs/PointCloud2.h
 -
-pcl/visualization/cloud_viewer.h
--
 pcl_conversions/pcl_conversions.h
 -
 pcl/common/impl/io.hpp
@@ -2752,12 +2750,6 @@ boost/foreach.hpp
 boost/date_time/posix_time/posix_time.hpp
 -
 boost/filesystem.hpp
--
-
-/usr/include/pcl-1.7/pcl/visualization/cloud_viewer.h
-pcl/visualization/pcl_visualizer.h
--
-string
 -
 
 /usr/include/pcl-1.7/pcl/visualization/common/actor_map.h

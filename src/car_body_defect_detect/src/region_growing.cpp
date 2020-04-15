@@ -3,13 +3,13 @@
 
 #include <iostream>
 #include <vector>
+#include <thread>
 #include <pcl/point_types.h>
 #include <pcl/io/pcd_io.h>
 #include <pcl/search/search.h>
 #include <pcl/search/kdtree.h>
 #include <pcl/features/normal_3d.h>
 #include <pcl/segmentation/region_growing.h>
-#include <pcl/visualization/cloud_viewer.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <sensor_msgs/PointCloud2.h>
 #include <pcl_conversions/pcl_conversions.h>
@@ -113,6 +113,43 @@ bool region_grow (car_body_defect_detect::region_grow::Request  &req,
   pcl::toROSMsg(*defect_cloud, defect_point_cloud);
   pub.publish(defect_point_cloud);
   std::cout << "[region_grower]Published to topic:defect_cloud"<<std::endl;
+ 
+  
+  //Do visualization to see the result
+  pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
+  viewer->initCameraParameters ();
+  viewer->setBackgroundColor (0, 0, 0);
+  
+  int v1(0);
+  viewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
+  viewer->setBackgroundColor (0, 0, 0, v1);
+  viewer->addText("cluster result", 10, 10, "v1 text", v1);
+  pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(colored_cloud);
+  viewer->addPointCloud<pcl::PointXYZRGB> (colored_cloud, rgb, "sample cloud1",v1);
+  
+  
+  int v2(0);
+  viewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2);
+  viewer->setBackgroundColor (0.3, 0.3, 0.3, v2);
+  viewer->addText("defect_cloud", 10, 10, "v2 text", v2);
+  pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(defect_cloud, 0, 255, 0);
+  viewer->addPointCloud<pcl::PointXYZ> (defect_cloud, single_color, "sample cloud2", v2);
+  
+  
+  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud1");
+  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud2");
+  viewer->addCoordinateSystem (1.0);
+  
+  //pcl::visualization::CloudViewer viewer1 ("Cluster viewer1");
+  //viewer1.showCloud(defect_cloud);  
+
+   while (!viewer->wasStopped ())
+  {
+    std::cout << "fuck off"<<endl;
+    viewer->spinOnce (100);
+    std::cout << "fuck you"<<endl;
+    //std::this_thread::sleep_for(100ms);
+  }
 }
 
 

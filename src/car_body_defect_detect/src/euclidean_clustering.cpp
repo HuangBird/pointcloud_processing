@@ -9,7 +9,6 @@
 #include <pcl/features/normal_3d.h>
 #include <pcl/visualization/pcl_visualizer.h>
 #include <sensor_msgs/PointCloud2.h>
-#include <pcl/visualization/cloud_viewer.h>
 #include <pcl_conversions/pcl_conversions.h>
 #include <pcl/common/impl/io.hpp>
 #include <pcl/segmentation/extract_clusters.h>
@@ -53,6 +52,7 @@ euclidean_clustering (const sensor_msgs::PointCloud2ConstPtr& defect_point_cloud
   
   //Do the euclidean cluster
   pcl::search::KdTree<pcl::PointXYZ>::Ptr Neighbor(new pcl::search::KdTree<pcl::PointXYZ>());
+  Neighbor->setInputCloud(defect_cloud);
   std::vector<pcl::PointIndices> defect_final_cluster_indices;
   pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
   std::cout <<"[euclidean_cluster]Set the distance tolerance (mm)"<<endl;
@@ -60,38 +60,42 @@ euclidean_clustering (const sensor_msgs::PointCloud2ConstPtr& defect_point_cloud
   std::cin >> dis_tor;
   ec.setClusterTolerance (dis_tor); // the unit is m
   ec.setMaxClusterSize (100000);  
-  ec.setMinClusterSize (10);  // only care about defect contain large amount of points
+  ec.setMinClusterSize (30);  // only care about defect contain large amount of points
   ec.setSearchMethod (Neighbor);
   ec.setInputCloud (defect_cloud);
   ec.extract(defect_final_cluster_indices);
   
   std::size_t k = defect_final_cluster_indices.size();
-   
+  std::cout << k <<endl; 
    //gather each indice and do visualization for them
   pcl::PointCloud<pcl::PointXYZ>::Ptr defect_final (new pcl::PointCloud<pcl::PointXYZ>()); 
   pcl::PointCloud<pcl::PointXYZRGB>::Ptr defect_final_colored(new pcl::PointCloud<pcl::PointXYZRGB>()); 
   defect_final_colored->points.resize(defect_cloud->points.size());
-
+  
+  int count = 0;
   for(std::size_t j = 0; j < k; j++)
   {
     //rebuild the point cloud in each loop and change a color then put them into one XYZRGB point cloud for visualization
+  //  std::cout << "Input the number of cloud you want to visualize"<<endl;
+  //  int j;
+  //  std::cin >> j ;
     defect_final->points.resize(defect_final_cluster_indices[j].indices.size());
     pcl::copyPointCloud(*defect_cloud,defect_final_cluster_indices[j].indices,*defect_final);
     double r = rand()/double(RAND_MAX) * 255;
     double g = rand()/double(RAND_MAX) * 255;
     double b = rand()/double(RAND_MAX) * 255;
-       for(std::size_t i = 0; i < defect_final->points.size(); ++i ) 
+       for(std::size_t i = 0; i < defect_final_cluster_indices[j].indices.size(); ++i ) 
       {
-       defect_final_colored->points[i].x = defect_final->points[i].x;
-       defect_final_colored->points[i].y = defect_final->points[i].y;
-       defect_final_colored->points[i].z = defect_final->points[i].z;
-       defect_final_colored->points[i].r = r;
-       defect_final_colored->points[i].g = g;
-       defect_final_colored->points[i].b = b;
-       //std::cout<<normals->points[i].normal_x<<" "<<normals->points[i].normal_y<<" "<<normals->points[i].normal_z<<endl;
+       defect_final_colored->points[count].x = defect_final->points[i].x;
+       defect_final_colored->points[count].y = defect_final->points[i].y;
+       defect_final_colored->points[count].z = defect_final->points[i].z;
+       defect_final_colored->points[count].r = r;
+       defect_final_colored->points[count].g = g;
+       defect_final_colored->points[count].b = b;
+       count++;
       }
+
   }
-    
     pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
     viewer->initCameraParameters ();
     viewer->setBackgroundColor (0, 0, 0);
