@@ -4,6 +4,9 @@
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_growRequest.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_growResponse.h
+car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h
+car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_growRequest.h
+car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_growResponse.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/src/region_growing.cpp
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /opt/ros/kinetic/include/pcl_conversions/pcl_conversions.h
 car_body_defect_detect/CMakeFiles/region_growing.dir/src/region_growing.cpp.o: /opt/ros/kinetic/include/pcl_msgs/ModelCoefficients.h

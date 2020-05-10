@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/car_body_defect_detect_generate_messages_eus"
-  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l"
   "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/region_grow.l"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/visualize_area.l"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/plane_model.l"
   "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/read_pcd.l"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/visualize_input.l"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/visualize_region_grow.l"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/srv/visualize_defect.l"
   "/home/hhhbird/Codes/pointcloud_processing/devel/share/roseus/ros/car_body_defect_detect/manifest.l"
 )
 

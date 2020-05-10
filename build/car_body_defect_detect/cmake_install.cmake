@@ -37,6 +37,10 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv"
     "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv"
     "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+    "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_input.srv"
+    "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_defect.srv"
+    "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_region_grow.srv"
+    "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_area.srv"
     )
 endif()
 

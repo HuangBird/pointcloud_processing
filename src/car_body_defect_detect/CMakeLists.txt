@@ -66,6 +66,10 @@ SET(CMAKE_CXX_FLAGS "-std=c++0x")
    region_grow.srv
    read_pcd.srv
    plane_model.srv
+   visualize_input.srv
+   visualize_defect.srv
+   visualize_region_grow.srv
+   visualize_area.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -228,4 +232,10 @@ target_link_libraries(euclidean_clustering ${catkin_LIBRARIES})
 
 add_executable(plane_segmentation src/plane_segmentation.cpp)
 target_link_libraries(plane_segmentation ${catkin_LIBRARIES})
+
+add_executable(area_get src/area_get.cpp)
+target_link_libraries(area_get ${catkin_LIBRARIES})
+
+##add_executable(visualizer src/visualizer.cpp)
+##target_link_libraries(visualizer ${catkin_LIBRARIES})
 

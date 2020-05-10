@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/car_body_defect_detect_generate_messages_py"
-  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_plane_model.py"
   "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_region_grow.py"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_visualize_area.py"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_plane_model.py"
   "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_read_pcd.py"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_visualize_input.py"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_visualize_region_grow.py"
+  "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/_visualize_defect.py"
   "/home/hhhbird/Codes/pointcloud_processing/devel/lib/python2.7/dist-packages/car_body_defect_detect/srv/__init__.py"
 )
 

@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv"
+services_str = "/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_input.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_defect.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_region_grow.srv;/home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_area.srv"
 pkg_name = "car_body_defect_detect"
 dependencies_str = "sensor_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

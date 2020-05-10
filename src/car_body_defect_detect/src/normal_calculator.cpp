@@ -22,12 +22,13 @@ ros::Subscriber sub;
 ros::Publisher pub;
 
 
+
 void calculate_normal (const sensor_msgs::PointCloud2ConstPtr& init_pointcloud)
 {
   //calculate the normal from the topic:init_pointcloud  
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-  sensor_msgs::PointCloud2 cloud_with_normals;
-  pcl::PointCloud<pcl::PointNormal> p_n_cloud;
+  sensor_msgs::PointCloud2 cloud_normals;
+  //pcl::PointCloud<pcl::PointNormal> p_n_cloud;
 
   pcl::fromROSMsg(*init_pointcloud, *cloud);
 
@@ -51,10 +52,10 @@ void calculate_normal (const sensor_msgs::PointCloud2ConstPtr& init_pointcloud)
             << "[normal_calculator]It takes "<< dur_time <<"s"<<endl ;
   
   //here we compensate the point cloud with normals
-  pcl::concatenateFields (*cloud, *normals, p_n_cloud);
+  //pcl::concatenateFields (*cloud, *normals, p_n_cloud);
 
-  pcl::toROSMsg(p_n_cloud, cloud_with_normals);
-  pub.publish (cloud_with_normals);
+  pcl::toROSMsg(*normals, cloud_normals);
+  pub.publish (cloud_normals);
   std::cout << "[normal_calculator]Published to topic:pointcloud_with_normals"<<std::endl; 
                    
 }
@@ -70,7 +71,7 @@ main (int argc, char** argv)
   sub = nh.subscribe("init_pointcloud", 1, calculate_normal); 
 
   // tell the master node the information about the ROS publisher 
-  pub = nh.advertise<sensor_msgs::PointCloud2> ("pointcloud_with_normals", 1);
+  pub = nh.advertise<sensor_msgs::PointCloud2> ("cloud_normals", 1);
   std::cout<<"[normal_calculator]Ready to calculate normal of point cloud from topic: init_pointcloud"<<endl;
   // Spin
   ros::spin();

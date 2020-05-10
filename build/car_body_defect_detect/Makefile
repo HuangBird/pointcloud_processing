@@ -166,6 +166,66 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+car_body_defect_detect/CMakeFiles/area_get.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/area_get.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/area_get.dir/rule
+
+# Convenience name for target.
+area_get: car_body_defect_detect/CMakeFiles/area_get.dir/rule
+
+.PHONY : area_get
+
+# fast build rule for target.
+area_get/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/build
+.PHONY : area_get/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+# Convenience name for target.
+euclidean_clustering: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+.PHONY : euclidean_clustering
+
+# fast build rule for target.
+euclidean_clustering/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
+.PHONY : euclidean_clustering/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+
+# Convenience name for target.
+normal_calculator: car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+
+.PHONY : normal_calculator
+
+# fast build rule for target.
+normal_calculator/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
+.PHONY : normal_calculator/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/region_growing.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/region_growing.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/rule
+
+# Convenience name for target.
+region_growing: car_body_defect_detect/CMakeFiles/region_growing.dir/rule
+
+.PHONY : region_growing
+
+# fast build rule for target.
+region_growing/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/build
+.PHONY : region_growing/fast
+
+# Convenience name for target.
 car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
 .PHONY : car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
@@ -511,6 +571,21 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 # Convenience name for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_region_grow
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_region_grow/fast
+
+# Convenience name for target.
 car_body_defect_detect/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
 .PHONY : car_body_defect_detect/CMakeFiles/pcl_msgs_generate_messages_eus.dir/rule
@@ -796,21 +871,6 @@ geometry_msgs_generate_messages_eus/fast:
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
 car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
@@ -854,6 +914,36 @@ nodelet_generate_messages_lisp: car_body_defect_detect/CMakeFiles/nodelet_genera
 nodelet_generate_messages_lisp/fast:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make car_body_defect_detect/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_defect: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_defect
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_defect/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_defect/fast
 
 # Convenience name for target.
 car_body_defect_detect/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
@@ -1411,21 +1501,6 @@ car_body_defect_detect_generate_messages_eus/fast:
 .PHONY : car_body_defect_detect_generate_messages_eus/fast
 
 # Convenience name for target.
-car_body_defect_detect/CMakeFiles/region_growing.dir/rule:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/region_growing.dir/rule
-.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/rule
-
-# Convenience name for target.
-region_growing: car_body_defect_detect/CMakeFiles/region_growing.dir/rule
-
-.PHONY : region_growing
-
-# fast build rule for target.
-region_growing/fast:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/build
-.PHONY : region_growing/fast
-
-# Convenience name for target.
 car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
@@ -1454,6 +1529,36 @@ car_body_defect_detect_generate_messages: car_body_defect_detect/CMakeFiles/car_
 car_body_defect_detect_generate_messages/fast:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/build
 .PHONY : car_body_defect_detect_generate_messages/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_area: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_area
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_area/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_area/fast
+
+# Convenience name for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_input: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_input
+
+# fast build rule for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_input/fast:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_input/fast
 
 # Convenience name for target.
 car_body_defect_detect/CMakeFiles/tf_generate_messages_cpp.dir/rule:
@@ -1590,35 +1695,32 @@ car_body_defect_detect_genpy/fast:
 	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/build
 .PHONY : car_body_defect_detect_genpy/fast
 
-# Convenience name for target.
-car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
-.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+src/area_get.o: src/area_get.cpp.o
 
-# Convenience name for target.
-normal_calculator: car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+.PHONY : src/area_get.o
 
-.PHONY : normal_calculator
+# target to build an object file
+src/area_get.cpp.o:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/src/area_get.cpp.o
+.PHONY : src/area_get.cpp.o
 
-# fast build rule for target.
-normal_calculator/fast:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
-.PHONY : normal_calculator/fast
+src/area_get.i: src/area_get.cpp.i
 
-# Convenience name for target.
-car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
-.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+.PHONY : src/area_get.i
 
-# Convenience name for target.
-euclidean_clustering: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+# target to preprocess a source file
+src/area_get.cpp.i:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/src/area_get.cpp.i
+.PHONY : src/area_get.cpp.i
 
-.PHONY : euclidean_clustering
+src/area_get.s: src/area_get.cpp.s
 
-# fast build rule for target.
-euclidean_clustering/fast:
-	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
-.PHONY : euclidean_clustering/fast
+.PHONY : src/area_get.s
+
+# target to generate assembly for a file
+src/area_get.cpp.s:
+	cd /home/hhhbird/Codes/pointcloud_processing/build && $(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/src/area_get.cpp.s
+.PHONY : src/area_get.cpp.s
 
 src/euclidean_clustering.o: src/euclidean_clustering.cpp.o
 
@@ -1764,6 +1866,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... install/local"
 	@echo "... install/strip"
+	@echo "... area_get"
+	@echo "... euclidean_clustering"
+	@echo "... normal_calculator"
+	@echo "... region_growing"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_nodejs"
@@ -1788,6 +1894,7 @@ help:
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... bond_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_visualize_region_grow"
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
 	@echo "... _car_body_defect_detect_generate_messages_check_deps_read_pcd"
@@ -1808,10 +1915,11 @@ help:
 	@echo "... pcl_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... nodelet_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_visualize_defect"
 	@echo "... edit_cache"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
@@ -1851,9 +1959,10 @@ help:
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... car_body_defect_detect_generate_messages_eus"
-	@echo "... region_growing"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... car_body_defect_detect_generate_messages"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_visualize_area"
+	@echo "... _car_body_defect_detect_generate_messages_check_deps_visualize_input"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... car_body_defect_detect_generate_messages_cpp"
 	@echo "... car_body_defect_detect_generate_messages_lisp"
@@ -1863,8 +1972,9 @@ help:
 	@echo "... car_body_defect_detect_generate_messages_nodejs"
 	@echo "... car_body_defect_detect_gennodejs"
 	@echo "... car_body_defect_detect_genpy"
-	@echo "... normal_calculator"
-	@echo "... euclidean_clustering"
+	@echo "... src/area_get.o"
+	@echo "... src/area_get.i"
+	@echo "... src/area_get.s"
 	@echo "... src/euclidean_clustering.o"
 	@echo "... src/euclidean_clustering.i"
 	@echo "... src/euclidean_clustering.s"

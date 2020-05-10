@@ -53,36 +53,72 @@ CMAKE_BINARY_DIR = /home/hhhbird/Codes/pointcloud_processing/build
 # Include the progress variables for this target.
 include car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/progress.make
 
-car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h
 
-
-/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
-/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv
-/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/share/gencpp/msg.h.template
-/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from car_body_defect_detect/plane_model.srv"
-	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from car_body_defect_detect/region_grow.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from car_body_defect_detect/region_grow.srv"
 	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/region_grow.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_area.srv
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from car_body_defect_detect/visualize_area.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_area.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from car_body_defect_detect/plane_model.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/plane_model.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
 
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h: /opt/ros/kinetic/share/gencpp/msg.h.template
 /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h: /opt/ros/kinetic/share/gencpp/srv.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from car_body_defect_detect/read_pcd.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating C++ code from car_body_defect_detect/read_pcd.srv"
 	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/read_pcd.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
 
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_input.srv
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating C++ code from car_body_defect_detect/visualize_input.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_input.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_region_grow.srv
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating C++ code from car_body_defect_detect/visualize_region_grow.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_region_grow.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
+
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h: /opt/ros/kinetic/lib/gencpp/gen_cpp.py
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h: /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_defect.srv
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h: /opt/ros/kinetic/share/gencpp/msg.h.template
+/home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h: /opt/ros/kinetic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating C++ code from car_body_defect_detect/visualize_defect.srv"
+	cd /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect && /home/hhhbird/Codes/pointcloud_processing/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/kinetic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/hhhbird/Codes/pointcloud_processing/src/car_body_defect_detect/srv/visualize_defect.srv -Isensor_msgs:/opt/ros/kinetic/share/sensor_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p car_body_defect_detect -o /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect -e /opt/ros/kinetic/share/gencpp/cmake/..
+
 car_body_defect_detect_generate_messages_cpp: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp
-car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h
 car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/region_grow.h
+car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_area.h
+car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/plane_model.h
 car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/read_pcd.h
+car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_input.h
+car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_region_grow.h
+car_body_defect_detect_generate_messages_cpp: /home/hhhbird/Codes/pointcloud_processing/devel/include/car_body_defect_detect/visualize_defect.h
 car_body_defect_detect_generate_messages_cpp: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/build.make
 
 .PHONY : car_body_defect_detect_generate_messages_cpp

@@ -22,7 +22,8 @@ int user_data;
 double dur_time;
 clock_t start_t ;
 clock_t end_t ;
-ros::Subscriber sub;
+ros::Subscriber sub1;
+ros::Subscriber sub2;
 ros::Publisher pub;
 size_t num;
 //pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
@@ -56,6 +57,39 @@ data_store (const sensor_msgs::PointCloud2ConstPtr& pointcloud_with_normals)
 }
 */
 
+void plane_judge(const sensor_msgs::PointCloud2ConstPtr& defect_area_msg)
+{
+  pcl::PointCloud<pcl::PointXYZ>::Ptr defect_area (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::fromROSMsg(*defect_area_msg, *defect_area);
+  
+  pcl::ModelCoefficients::Ptr coefficients (new pcl::ModelCoefficients);
+  pcl::PointIndices::Ptr inliers (new pcl::PointIndices);
+  // Create the segmentation object
+  pcl::SACSegmentation<pcl::PointXYZ> seg;
+  seg.setOptimizeCoefficients (true);
+  seg.setModelType (pcl::SACMODEL_PLANE);
+  seg.setMethodType (pcl::SAC_RANSAC);
+  
+  //Set the threshold for the 
+  std::cout << "[plane_segmentation]Set the threshold for the distance tolerance(mm)"<<std::endl ;
+  float dis_tolerance ;
+  std::cin >> dis_tolerance ;
+  
+  seg.setDistanceThreshold (dis_tolerance);
+  seg.setInputCloud (defect_area);
+  std::cout << "[plane_segmentation]Estimating plane and check points..."<<std::endl ;
+  start_t = clock();
+  seg.segment (*inliers, *coefficients);
+  end_t = clock();
+  dur_time = (double) ((end_t - start_t)/CLOCKS_PER_SEC);
+  std::cout << "[plane_segmentation]The number of inliers is: "<< inliers->indices.size()<<endl;
+  float flag_inliers = static_cast<float>(inliers->indices.size()) / static_cast<float>(defect_area->points.size());
+  std::cout << "[plane_segmentation]The ratio of inliers is: "<< flag_inliers <<endl;
+
+}
+
+std::vector<int> v;
+
 bool plane_segmentation (car_body_defect_detect::plane_model::Request  &req, 
                          car_body_defect_detect::plane_model::Response &res )
 {
@@ -83,11 +117,11 @@ bool plane_segmentation (car_body_defect_detect::plane_model::Request  &req,
   {
     cloud->points[i].x = rand () / (RAND_MAX + 1.0f);
     cloud->points[i].y = rand () / (RAND_MAX + 1.0f);
-    cloud->points[i].z = 1.0 + (rand () / (RAND_MAX + 1.0f))/100;
+    cloud->points[i].z = 1.0 + (rand () / (RAND_MAX + 1.0f))/10;
   }
 
   // Set a few outliers
-  cloud->points[0].z = 1.23;
+  cloud->points[0].z = 1.11;
   cloud->points[6].z = 1.16;
   cloud->points[10].z = 1.11;
   cloud->points[25].z = 1.2;
@@ -103,7 +137,7 @@ bool plane_segmentation (car_body_defect_detect::plane_model::Request  &req,
   seg.setModelType (pcl::SACMODEL_PLANE);
   seg.setMethodType (pcl::SAC_RANSAC);
   
-  //Set the threshold for the curvature in a cluster
+  //Set the threshold for the tolerance in the distance between points and the plane
   std::cout << "[plane_segmentation]Set the threshold for the distance tolerance(mm)"<<std::endl ;
   float dis_tolerance ;
   std::cin >> dis_tolerance ;
@@ -138,7 +172,7 @@ bool plane_segmentation (car_body_defect_detect::plane_model::Request  &req,
     flags[inliers->indices[j]] = 0;
   } //set all the inliers position to 0 
 
-  defect_cloud->points.resize(num-inliers->indices.size ());
+  defect_cloud->points.resize(num - inliers->indices.size ());
   colored_cloud->points.resize(num);
   int count = 0;
   std::cout<<"define count"<<endl;
@@ -210,6 +244,7 @@ main (int argc, char** argv)
   //define the service region_grow
   ros::ServiceServer service = nh.advertiseService("plane_segmentation", plane_segmentation);
   
+  sub1=nh.subscribe("defect_area",20, plane_judge);
   // tell the master node the information about the ROS subscriber 
   //sub = nh.subscribe("pointcloud_with_normals", 1, data_store);
 

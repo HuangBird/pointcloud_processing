@@ -1,5 +1,6 @@
 #include "ros/ros.h"
 #include "car_body_defect_detect/region_grow.h"
+#include "car_body_defect_detect/visualize_region_grow.h"
 
 #include <iostream>
 #include <vector>
@@ -21,20 +22,35 @@ int user_data;
 double dur_time;
 clock_t start_t ;
 clock_t end_t ;
-ros::Subscriber sub;
-ros::Publisher pub;
+ros::Subscriber sub1;
+ros::Subscriber sub2;
+ros::Publisher pub1;
+ros::Publisher pub2; 
 pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
 pcl::PointCloud<pcl::Normal>::Ptr normals (new pcl::PointCloud<pcl::Normal>);
+pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud;
+pcl::PointCloud <pcl::PointXYZ>::Ptr normal_cloud(new pcl::PointCloud <pcl::PointXYZ>());
+pcl::PointCloud <pcl::PointXYZ>::Ptr defect_cloud(new pcl::PointCloud <pcl::PointXYZ>());
 
 void
-data_store (const sensor_msgs::PointCloud2ConstPtr& pointcloud_with_normals)
+points_store (const sensor_msgs::PointCloud2ConstPtr& cloud_msg)
 {
  
-  pcl::PointCloud<pcl::PointNormal> cloud_normals;
   //First, receive data from topic and store it here
-  //Second, convert the PointNormal data to pointXYZ data and Normal data
-  pcl::fromROSMsg(*pointcloud_with_normals, cloud_normals);   
-  
+  pcl::fromROSMsg(*cloud_msg, *cloud);   
+  std::cout << "[region_grow]Received the point cloud and stored"<<endl;
+}
+
+void
+normals_store (const sensor_msgs::PointCloud2ConstPtr& normals_msg)
+{
+   pcl::fromROSMsg(*normals_msg, *normals);
+   std::cout << "[region_grow]Received the cloud normals and stored"<<endl;
+}
+
+   /*
+ }
+  {
   cloud->points.resize(cloud_normals.points.size()) ;
   normals->points.resize(cloud_normals.points.size()) ;
 
@@ -50,6 +66,44 @@ data_store (const sensor_msgs::PointCloud2ConstPtr& pointcloud_with_normals)
   }
   
   std::cout<<"[region_grower]Data received form topic: pointcloud_with_normals, ready to do the normal based region grow clustering"<<endl;
+}
+
+ */
+bool visualize_region_grow(car_body_defect_detect::visualize_region_grow::Request  &req, 
+                           car_body_defect_detect::visualize_region_grow::Response &res )
+{
+  // Visualization
+  pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
+  viewer->initCameraParameters ();
+  
+  int v1(0);
+  viewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
+  viewer->setBackgroundColor (0, 0, 0, v1);
+  viewer->addText("cluster result", 10, 10, "v1 text", v1);
+  pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(colored_cloud);
+  viewer->addPointCloud<pcl::PointXYZRGB> (colored_cloud, rgb, "sample cloud1",v1);
+  
+  
+  int v2(0);
+  viewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2);
+  viewer->setBackgroundColor (0.3, 0.3, 0.3, v2);
+  viewer->addText("defect_cloud", 10, 10, "v2 text", v2);
+  pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(defect_cloud, 0, 255, 0);
+  viewer->addPointCloud<pcl::PointXYZ> (defect_cloud, single_color, "sample cloud2", v2);
+  
+  
+  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud1");
+  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud2");
+  viewer->addCoordinateSystem (1.0);
+  
+  //pcl::visualization::CloudViewer viewer1 ("Cluster viewer1");
+  //viewer1.showCloud(defect_cloud);  
+
+   while (!viewer->wasStopped ())
+  {
+    viewer->spinOnce (100);
+    //std::this_thread::sleep_for(100ms);
+  }
 }
 
 
@@ -89,10 +143,8 @@ bool region_grow (car_body_defect_detect::region_grow::Request  &req,
 
   std::cout << "[region_grower]Number of clusters is equal to " << clusters.size () << std::endl;
 
-  pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
+  colored_cloud = reg.getColoredCloud ();
    
-  pcl::PointCloud <pcl::PointXYZ>::Ptr normal_cloud(new pcl::PointCloud <pcl::PointXYZ>());
-  pcl::PointCloud <pcl::PointXYZ>::Ptr defect_cloud(new pcl::PointCloud <pcl::PointXYZ>());
   pcl::copyPointCloud(*cloud,clusters[0].indices,*normal_cloud);
   
   //Gather all the defect point into one cluster 
@@ -100,56 +152,23 @@ bool region_grow (car_body_defect_detect::region_grow::Request  &req,
      //indices are of the same type as std::vector<int>
   for(std::size_t i = 1;i < clusters.size ();i++)
   {
-    for(std::size_t count = 0;count < clusters[i].indices.size ();count++)
-      {
-        defect_clusters.push_back(clusters[i].indices[count]);
+//   for(std::size_t count = 0;count < clusters[i].indices.size ();count++)
+//      {
+        defect_clusters.insert(defect_clusters.end(), clusters[i].indices.begin(),clusters[i].indices.end());
         //put the indice in the cluster to the end of the defect_cluster
-      }
+//      }
   }
   pcl::copyPointCloud(*cloud,defect_clusters,*defect_cloud);
   
   //Publish the defect point cloud to the topic
   sensor_msgs::PointCloud2 defect_point_cloud;
+  sensor_msgs::PointCloud2 surface_point_cloud;
   pcl::toROSMsg(*defect_cloud, defect_point_cloud);
-  pub.publish(defect_point_cloud);
+  pcl::toROSMsg(*normal_cloud, surface_point_cloud);
+  pub1.publish(defect_point_cloud);
+  pub2.publish(surface_point_cloud);
   std::cout << "[region_grower]Published to topic:defect_cloud"<<std::endl;
  
-  
-  //Do visualization to see the result
-  pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
-  viewer->initCameraParameters ();
-  viewer->setBackgroundColor (0, 0, 0);
-  
-  int v1(0);
-  viewer->createViewPort(0.0, 0.0, 0.5, 1.0, v1);
-  viewer->setBackgroundColor (0, 0, 0, v1);
-  viewer->addText("cluster result", 10, 10, "v1 text", v1);
-  pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(colored_cloud);
-  viewer->addPointCloud<pcl::PointXYZRGB> (colored_cloud, rgb, "sample cloud1",v1);
-  
-  
-  int v2(0);
-  viewer->createViewPort(0.5, 0.0, 1.0, 1.0, v2);
-  viewer->setBackgroundColor (0.3, 0.3, 0.3, v2);
-  viewer->addText("defect_cloud", 10, 10, "v2 text", v2);
-  pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(defect_cloud, 0, 255, 0);
-  viewer->addPointCloud<pcl::PointXYZ> (defect_cloud, single_color, "sample cloud2", v2);
-  
-  
-  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud1");
-  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud2");
-  viewer->addCoordinateSystem (1.0);
-  
-  //pcl::visualization::CloudViewer viewer1 ("Cluster viewer1");
-  //viewer1.showCloud(defect_cloud);  
-
-   while (!viewer->wasStopped ())
-  {
-    std::cout << "fuck off"<<endl;
-    viewer->spinOnce (100);
-    std::cout << "fuck you"<<endl;
-    //std::this_thread::sleep_for(100ms);
-  }
 }
 
 
@@ -160,13 +179,21 @@ main (int argc, char** argv)
   ros::NodeHandle nh; 
 
   //define the service region_grow
-  ros::ServiceServer service = nh.advertiseService("region_grow", region_grow);
-  
+  ros::ServiceServer service1 = nh.advertiseService("region_grow", region_grow);
+  std::cout<<"[region_grower]Service 'region_grow' is now ready for detecting defects by normal-based region grow algorithm"<<endl;
+
+  ros::ServiceServer service2 = nh.advertiseService("visualize_region_grow", visualize_region_grow);
+  std::cout<<"[region_grower]Service 'visualize_region_grow' is now ready for visualize the result of region grow."<<endl;
+
   // tell the master node the information about the ROS subscriber 
-  sub = nh.subscribe("pointcloud_with_normals", 1, data_store);
+  sub1 = nh.subscribe("init_pointcloud", 1, points_store);
+  sub2 = nh.subscribe("cloud_normals",1,normals_store);
 
   // tell the master node the information about the ROS publisher 
-  pub = nh.advertise<sensor_msgs::PointCloud2> ("defect_cloud", 1);
+  pub1 = nh.advertise<sensor_msgs::PointCloud2> ("defect_cloud", 1);
+  pub2 = nh.advertise<sensor_msgs::PointCloud2> ("surface_cloud", 1);
+  
+
   std::cout<<"[region_grower]Ready to detect defect for point cloud from topic: pointcloud_with_normals"<<endl;
   
   // Spin

@@ -1,4 +1,5 @@
 #include "ros/ros.h"
+#include "car_body_defect_detect/visualize_defect.h"
 
 #include <iostream>
 #include <vector>
@@ -15,32 +16,41 @@
 
 using namespace std;
 
-int user_data;
 double dur_time;
 clock_t start_t ;
 clock_t end_t ;
 ros::Subscriber sub;
-ros::Publisher pub;
+ros::Publisher pub1;
+ros::Publisher pub2;
+pcl::PointCloud<pcl::PointXYZRGB>::Ptr defect_final_colored(new pcl::PointCloud<pcl::PointXYZRGB>()); //The colored defect point cloud based on euclidean clustering 
 
-/*
-pcl::visualization::PCLVisualizer::Ptr //visualize the point cloud
-SimplePointsVis(pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
+//visualization for colored defect point cloud based on euclidean clustering
+bool visualize_defect (car_body_defect_detect::visualize_defect::Request  &req, 
+                       car_body_defect_detect::visualize_defect::Response &res )
 {
-  pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
-  viewer->setBackgroundColor (0, 0, 0);
-  double r = rand()/double(RAND_MAX) * 255;
-  double g = rand()/double(RAND_MAX) * 255;
-  double b = rand()/double(RAND_MAX) * 255;
-  std::cout<< r<<" "<<g<<" "<<b<<endl; 
-  pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(cloud, r, g, b);
-  viewer->addPointCloud<pcl::PointXYZ> (cloud, single_color, "sample cloud");
-  viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud");
-  viewer->addCoordinateSystem (1.0);
-  viewer->initCameraParameters ();
-  return(viewer);
-}
-*/
+   // Visualization
+    pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
+    viewer->initCameraParameters ();
+    viewer->setBackgroundColor (0, 0, 0);
 
+    //std::cout<< r<<" "<<g<<" "<<b<<endl; 
+    //pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(defect_final, r, g, b);
+    pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(defect_final_colored);
+    viewer->addPointCloud<pcl::PointXYZRGB> (defect_final_colored, rgb, "sample cloud");
+    viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud");
+    viewer->addCoordinateSystem (1.0);
+  
+  //pcl::visualization::CloudViewer viewer1 ("Cluster viewer1");
+  //viewer1.showCloud(defect_cloud);  
+  
+  while (!viewer->wasStopped ())
+  {
+    viewer->spinOnce (100);
+    //std::this_thread::sleep_for(100ms);
+  }
+}
+
+//clustering service
 void
 euclidean_clustering (const sensor_msgs::PointCloud2ConstPtr& defect_point_cloud)
 {
@@ -66,21 +76,23 @@ euclidean_clustering (const sensor_msgs::PointCloud2ConstPtr& defect_point_cloud
   ec.extract(defect_final_cluster_indices);
   
   std::size_t k = defect_final_cluster_indices.size();
-  std::cout << k <<endl; 
-   //gather each indice and do visualization for them
-  pcl::PointCloud<pcl::PointXYZ>::Ptr defect_final (new pcl::PointCloud<pcl::PointXYZ>()); 
-  pcl::PointCloud<pcl::PointXYZRGB>::Ptr defect_final_colored(new pcl::PointCloud<pcl::PointXYZRGB>()); 
+  std::cout <<"number of defect cluster is: "<< k <<endl; 
+
+   //gather each indice, then publish and store for visualization
+  pcl::PointCloud<pcl::PointXYZ>::Ptr defect_final (new pcl::PointCloud<pcl::PointXYZ>());  
   defect_final_colored->points.resize(defect_cloud->points.size());
-  
+  sensor_msgs::PointCloud2 defect_cluster;
+
   int count = 0;
   for(std::size_t j = 0; j < k; j++)
   {
     //rebuild the point cloud in each loop and change a color then put them into one XYZRGB point cloud for visualization
-  //  std::cout << "Input the number of cloud you want to visualize"<<endl;
-  //  int j;
-  //  std::cin >> j ;
     defect_final->points.resize(defect_final_cluster_indices[j].indices.size());
     pcl::copyPointCloud(*defect_cloud,defect_final_cluster_indices[j].indices,*defect_final);
+    pcl::toROSMsg(*defect_final, defect_cluster);
+    pub1.publish(defect_cluster);
+    
+    //attach a color for points in each defect and store them for visualization  
     double r = rand()/double(RAND_MAX) * 255;
     double g = rand()/double(RAND_MAX) * 255;
     double b = rand()/double(RAND_MAX) * 255;
@@ -96,28 +108,8 @@ euclidean_clustering (const sensor_msgs::PointCloud2ConstPtr& defect_point_cloud
       }
 
   }
-    pcl::visualization::PCLVisualizer::Ptr viewer (new pcl::visualization::PCLVisualizer ("Point Cloud Viewer"));
-    viewer->initCameraParameters ();
-    viewer->setBackgroundColor (0, 0, 0);
 
-    //std::cout<< r<<" "<<g<<" "<<b<<endl; 
-    //pcl::visualization::PointCloudColorHandlerCustom<pcl::PointXYZ> single_color(defect_final, r, g, b);
-    pcl::visualization::PointCloudColorHandlerRGBField<pcl::PointXYZRGB> rgb(defect_final_colored);
-    viewer->addPointCloud<pcl::PointXYZRGB> (defect_final_colored, rgb, "sample cloud");
-    viewer->setPointCloudRenderingProperties (pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 1, "sample cloud");
-    viewer->addCoordinateSystem (1.0);
-  
-  //pcl::visualization::CloudViewer viewer1 ("Cluster viewer1");
-  //viewer1.showCloud(defect_cloud);  
-  
-  std::cout<<"[euclidean_cluster]Finish the final euclidean cluster"<<endl;
-  
-   while (!viewer->wasStopped ())
-  {
-    viewer->spinOnce (100);
-    //std::this_thread::sleep_for(100ms);
-  }
-  
+  std::cout <<"[euclidean_cluster]Euclidean clustering finished."<<endl;
 }
 
 
@@ -129,11 +121,18 @@ main (int argc, char** argv)
   
   // tell the master node the information about the ROS subscriber 
   sub = nh.subscribe("defect_cloud", 1, euclidean_clustering);
+  
+  //the first publisher publish the point cloud of one of the defects got by euclidean clustering
+  pub1 = nh.advertise<sensor_msgs::PointCloud2> ("defect_cloud_clusters", 20);
+
+  ros::ServiceServer service = nh.advertiseService("visualize_defect", visualize_defect);
+  std::cout<<"[euclidean_cluster]Service 'visualize_defect' now is ready for visualization of defect after clustering."<<endl;
 
   // tell the master node the information about the ROS publisher 
-//  pub = nh.advertise<sensor_msgs::PointCloud2> ("defect_clusters", 1);
+  //  pub = nh.advertise<sensor_msgs::PointCloud2> ("defect_clusters", 1);
   std::cout<<"[euclidean_cluster]Ready to do the final cluster for defect_cloud"<<endl;
-  
+ 
+
   // Spin
   ros::Rate loop_rate(10);
   while (ros::ok())

@@ -246,7 +246,7 @@ gtest/preinstall: gtest/gtest/preinstall
 gtest/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock.dir/build.make gtest/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=20,21,22 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=42,43,44 "Built target gmock"
 .PHONY : gtest/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -278,7 +278,7 @@ clean: gtest/CMakeFiles/gmock.dir/clean
 gtest/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/CMakeFiles/gmock_main.dir/build.make gtest/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=23,24,25,26 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=45,46,47,48 "Built target gmock_main"
 .PHONY : gtest/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -329,7 +329,7 @@ gtest/gtest/preinstall:
 gtest/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest.dir/build.make gtest/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=27,28 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=49,50 "Built target gtest"
 .PHONY : gtest/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -361,7 +361,7 @@ clean: gtest/gtest/CMakeFiles/gtest.dir/clean
 gtest/gtest/CMakeFiles/gtest_main.dir/all: gtest/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/gtest/CMakeFiles/gtest_main.dir/build.make gtest/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=29,30 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=51,52 "Built target gtest_main"
 .PHONY : gtest/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -390,16 +390,21 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory car_body_defect_detect
 
 # Convenience name for "all" pass in the directory.
+car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/area_get.dir/all
+car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
+car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
+car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/region_growing.dir/all
 car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/plane_segmentation.dir/all
 car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/pcd_reader.dir/all
-car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/region_growing.dir/all
 car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/all
-car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
-car_body_defect_detect/all: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
 
 .PHONY : car_body_defect_detect/all
 
 # Convenience name for "clean" pass in the directory.
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/area_get.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/region_growing.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/bond_generate_messages_cpp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/nodelet_generate_messages_nodejs.dir/clean
@@ -423,6 +428,7 @@ car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/topic_tools_gene
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/topic_tools_generate_messages_eus.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/bond_generate_messages_eus.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/pcl_msgs_generate_messages_eus.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/clean
@@ -442,10 +448,11 @@ car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/geometry_msgs_ge
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/pcl_msgs_generate_messages_lisp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
@@ -483,9 +490,10 @@ car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/actionlib_msgs_g
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/actionlib_msgs_generate_messages_py.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/clean
-car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/region_growing.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/clean
+car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/tf_generate_messages_cpp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/clean
@@ -495,8 +503,6 @@ car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_gennodejs.dir/clean
 car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/clean
-car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
-car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
 
 .PHONY : car_body_defect_detect/clean
 
@@ -504,6 +510,154 @@ car_body_defect_detect/clean: car_body_defect_detect/CMakeFiles/euclidean_cluste
 car_body_defect_detect/preinstall:
 
 .PHONY : car_body_defect_detect/preinstall
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/area_get.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/area_get.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=1,2 "Built target area_get"
+.PHONY : car_body_defect_detect/CMakeFiles/area_get.dir/all
+
+# Include target in all.
+all: car_body_defect_detect/CMakeFiles/area_get.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/area_get.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/area_get.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/area_get.dir/rule
+
+# Convenience name for target.
+area_get: car_body_defect_detect/CMakeFiles/area_get.dir/rule
+
+.PHONY : area_get
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/area_get.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/area_get.dir/build.make car_body_defect_detect/CMakeFiles/area_get.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/area_get.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/area_get.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/euclidean_clustering.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=40,41 "Built target euclidean_clustering"
+.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
+
+# Include target in all.
+all: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+# Convenience name for target.
+euclidean_clustering: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
+
+.PHONY : euclidean_clustering
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/normal_calculator.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/normal_calculator.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=53,54 "Built target normal_calculator"
+.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
+
+# Include target in all.
+all: car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+
+# Convenience name for target.
+normal_calculator: car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
+
+.PHONY : normal_calculator
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/region_growing.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/region_growing.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=59,60 "Built target region_growing"
+.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/all
+
+# Include target in all.
+all: car_body_defect_detect/CMakeFiles/region_growing.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/region_growing.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/region_growing.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/rule
+
+# Convenience name for target.
+region_growing: car_body_defect_detect/CMakeFiles/region_growing.dir/rule
+
+.PHONY : region_growing
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/region_growing.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/region_growing.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
@@ -765,18 +919,22 @@ clean: car_body_defect_detect/CMakeFiles/roscpp_generate_messages_py.dir/clean
 # Target rules for target car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir
 
 # All Build rule for target.
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=14,15,16,17 "Built target car_body_defect_detect_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=32,33,34,35,36,37,38,39 "Built target car_body_defect_detect_generate_messages_py"
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_py.dir/rule
@@ -963,7 +1121,7 @@ clean: car_body_defect_detect/CMakeFiles/actionlib_msgs_generate_messages_cpp.di
 car_body_defect_detect/CMakeFiles/plane_segmentation.dir/all:
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build.make car_body_defect_detect/CMakeFiles/plane_segmentation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=35,36 "Built target plane_segmentation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=57,58 "Built target plane_segmentation"
 .PHONY : car_body_defect_detect/CMakeFiles/plane_segmentation.dir/all
 
 # Include target in all.
@@ -1005,7 +1163,7 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_geneus.dir/all: car_bod
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_geneus.dir/rule
@@ -1246,6 +1404,38 @@ car_body_defect_detect/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
 
 # clean rule for target.
 clean: car_body_defect_detect/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target _car_body_defect_detect_generate_messages_check_deps_visualize_region_grow"
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_region_grow
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/clean
 
 .PHONY : clean
 
@@ -1858,38 +2048,6 @@ clean: car_body_defect_detect/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir
-
-# All Build rule for target.
-car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/depend
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_nodejs"
-.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
-.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# clean rule for target.
-car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-
-# clean rule for target.
-clean: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target car_body_defect_detect/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
@@ -1982,6 +2140,70 @@ car_body_defect_detect/CMakeFiles/nodelet_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: car_body_defect_detect/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_nodejs"
+.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target _car_body_defect_detect_generate_messages_check_deps_visualize_defect"
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_defect: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_defect
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/clean
 
 .PHONY : clean
 
@@ -2189,7 +2411,7 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_gencpp.dir/all: car_bod
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_gencpp.dir/rule
@@ -2440,7 +2662,7 @@ clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messag
 car_body_defect_detect/CMakeFiles/pcd_reader.dir/all:
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/pcd_reader.dir/build.make car_body_defect_detect/CMakeFiles/pcd_reader.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/pcd_reader.dir/build.make car_body_defect_detect/CMakeFiles/pcd_reader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=33,34 "Built target pcd_reader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=55,56 "Built target pcd_reader"
 .PHONY : car_body_defect_detect/CMakeFiles/pcd_reader.dir/all
 
 # Include target in all.
@@ -3147,17 +3369,21 @@ clean: car_body_defect_detect/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/clea
 
 # All Build rule for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=4,5,6,7 "Built target car_body_defect_detect_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=10,11,12,13,14,15,16,17 "Built target car_body_defect_detect_generate_messages_eus"
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/rule
@@ -3174,43 +3400,6 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.d
 
 # clean rule for target.
 clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_eus.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target car_body_defect_detect/CMakeFiles/region_growing.dir
-
-# All Build rule for target.
-car_body_defect_detect/CMakeFiles/region_growing.dir/all:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/depend
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=37,38 "Built target region_growing"
-.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/all
-
-# Include target in all.
-all: car_body_defect_detect/CMakeFiles/region_growing.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-car_body_defect_detect/CMakeFiles/region_growing.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/region_growing.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
-.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/rule
-
-# Convenience name for target.
-region_growing: car_body_defect_detect/CMakeFiles/region_growing.dir/rule
-
-.PHONY : region_growing
-
-# clean rule for target.
-car_body_defect_detect/CMakeFiles/region_growing.dir/clean:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/region_growing.dir/build.make car_body_defect_detect/CMakeFiles/region_growing.dir/clean
-.PHONY : car_body_defect_detect/CMakeFiles/region_growing.dir/clean
-
-# clean rule for target.
-clean: car_body_defect_detect/CMakeFiles/region_growing.dir/clean
 
 .PHONY : clean
 
@@ -3267,7 +3456,7 @@ all: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 37
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/rule
@@ -3284,6 +3473,70 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/c
 
 # clean rule for target.
 clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target _car_body_defect_detect_generate_messages_check_deps_visualize_area"
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_area: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_area
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir
+
+# All Build rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/depend
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num= "Built target _car_body_defect_detect_generate_messages_check_deps_visualize_input"
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
+
+# Build rule for subdir invocation for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule
+
+# Convenience name for target.
+_car_body_defect_detect_generate_messages_check_deps_visualize_input: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/rule
+
+.PHONY : _car_body_defect_detect_generate_messages_check_deps_visualize_input
+
+# clean rule for target.
+car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/clean:
+	$(MAKE) -f car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/build.make car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/clean
+.PHONY : car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/clean
+
+# clean rule for target.
+clean: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/clean
 
 .PHONY : clean
 
@@ -3324,17 +3577,21 @@ clean: car_body_defect_detect/CMakeFiles/tf_generate_messages_cpp.dir/clean
 
 # All Build rule for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=1,2,3 "Built target car_body_defect_detect_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=3,4,5,6,7,8,9 "Built target car_body_defect_detect_generate_messages_cpp"
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_cpp.dir/rule
@@ -3358,18 +3615,22 @@ clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_message
 # Target rules for target car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir
 
 # All Build rule for target.
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=8,9,10 "Built target car_body_defect_detect_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=18,19,20,21,22,23,24 "Built target car_body_defect_detect_generate_messages_lisp"
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_lisp.dir/rule
@@ -3465,7 +3726,7 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_genlisp.dir/all: car_bo
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_genlisp.dir/rule
@@ -3489,18 +3750,22 @@ clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_genlisp.dir/clea
 # Target rules for target car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir
 
 # All Build rule for target.
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_read_pcd.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_defect.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_region_grow.dir/all
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_plane_model.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_area.dir/all
+car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all: car_body_defect_detect/CMakeFiles/_car_body_defect_detect_generate_messages_check_deps_visualize_input.dir/all
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/depend
 	$(MAKE) -f car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/build.make car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=11,12,13 "Built target car_body_defect_detect_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=25,26,27,28,29,30,31 "Built target car_body_defect_detect_generate_messages_nodejs"
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_generate_messages_nodejs.dir/rule
@@ -3532,7 +3797,7 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_gennodejs.dir/all: car_
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_gennodejs.dir/rule
@@ -3564,7 +3829,7 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/all: car_body
 
 # Build rule for subdir invocation for target.
 car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
 .PHONY : car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/rule
@@ -3581,80 +3846,6 @@ car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/clean:
 
 # clean rule for target.
 clean: car_body_defect_detect/CMakeFiles/car_body_defect_detect_genpy.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target car_body_defect_detect/CMakeFiles/normal_calculator.dir
-
-# All Build rule for target.
-car_body_defect_detect/CMakeFiles/normal_calculator.dir/all:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/depend
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=31,32 "Built target normal_calculator"
-.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
-
-# Include target in all.
-all: car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/normal_calculator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
-.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
-
-# Convenience name for target.
-normal_calculator: car_body_defect_detect/CMakeFiles/normal_calculator.dir/rule
-
-.PHONY : normal_calculator
-
-# clean rule for target.
-car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/normal_calculator.dir/build.make car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
-.PHONY : car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
-
-# clean rule for target.
-clean: car_body_defect_detect/CMakeFiles/normal_calculator.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target car_body_defect_detect/CMakeFiles/euclidean_clustering.dir
-
-# All Build rule for target.
-car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/depend
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles --progress-num=18,19 "Built target euclidean_clustering"
-.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
-
-# Include target in all.
-all: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hhhbird/Codes/pointcloud_processing/build/CMakeFiles 0
-.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
-
-# Convenience name for target.
-euclidean_clustering: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/rule
-
-.PHONY : euclidean_clustering
-
-# clean rule for target.
-car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean:
-	$(MAKE) -f car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/build.make car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
-.PHONY : car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
-
-# clean rule for target.
-clean: car_body_defect_detect/CMakeFiles/euclidean_clustering.dir/clean
 
 .PHONY : clean
 
